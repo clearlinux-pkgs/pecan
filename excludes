@@ -1,0 +1,8 @@
+# This file contains the output files that need %exclude. Full path
+# names, one per line.
+/usr/lib/python3.4/site-packages/pecan/tests/scaffold_fixtures/file_sub/bar_+package+
+/usr/lib/python3.4/site-packages/pecan/tests/scaffold_fixtures/file_sub/bar_+package+/spam.txt
+/usr/lib/python3.4/site-packages/pecan/tests/scaffold_fixtures/file_sub/foo_+package+
+/usr/lib/python2.7/site-packages/pecan/tests/scaffold_fixtures/file_sub/bar_+package+
+/usr/lib/python2.7/site-packages/pecan/tests/scaffold_fixtures/file_sub/bar_+package+/spam.txt
+/usr/lib/python2.7/site-packages/pecan/tests/scaffold_fixtures/file_sub/foo_+package+
