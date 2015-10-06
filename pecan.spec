@@ -4,7 +4,7 @@
 #
 Name     : pecan
 Version  : 1.0.2
-Release  : 16
+Release  : 17
 URL      : https://pypi.python.org/packages/source/p/pecan/pecan-1.0.2.tar.gz
 Source0  : https://pypi.python.org/packages/source/p/pecan/pecan-1.0.2.tar.gz
 Summary  : A WSGI object-dispatching web framework, designed to be lean and fast, with few dependencies.
