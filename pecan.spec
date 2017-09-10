@@ -4,13 +4,14 @@
 #
 Name     : pecan
 Version  : 1.2.1
-Release  : 34
+Release  : 35
 URL      : http://pypi.debian.net/pecan/pecan-1.2.1.tar.gz
 Source0  : http://pypi.debian.net/pecan/pecan-1.2.1.tar.gz
 Summary  : A WSGI object-dispatching web framework, designed to be lean and fast, with few dependencies.
 Group    : Development/Tools
 License  : BSD-3-Clause
 Requires: pecan-bin
+Requires: pecan-legacypython
 Requires: pecan-python
 Requires: Mako
 Requires: WebOb
@@ -37,9 +38,18 @@ Group: Binaries
 bin components for the pecan package.
 
 
+%package legacypython
+Summary: legacypython components for the pecan package.
+Group: Default
+
+%description legacypython
+legacypython components for the pecan package.
+
+
 %package python
 Summary: python components for the pecan package.
 Group: Default
+Requires: pecan-legacypython
 
 %description python
 python components for the pecan package.
@@ -53,12 +63,12 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1503071879
+export SOURCE_DATE_EPOCH=1505055364
 python2 setup.py build -b py2
 python3 setup.py build -b py3
 
 %install
-export SOURCE_DATE_EPOCH=1503071879
+export SOURCE_DATE_EPOCH=1505055364
 rm -rf %{buildroot}
 python2 -tt setup.py build -b py2 install --root=%{buildroot} --force
 python3 -tt setup.py build -b py3 install --root=%{buildroot} --force
@@ -74,7 +84,7 @@ echo ----[ mark ]----
 /usr/bin/gunicorn_pecan
 /usr/bin/pecan
 
-%files python
+%files legacypython
 %defattr(-,root,root,-)
 %exclude /usr/lib/python2.7/site-packages/pecan/scaffolds/base/+package+/__init__.py
 %exclude /usr/lib/python2.7/site-packages/pecan/scaffolds/base/+package+/__init__.pyc
@@ -112,4 +122,7 @@ echo ----[ mark ]----
 %exclude /usr/lib/python2.7/site-packages/pecan/tests/scaffold_fixtures/file_sub/bar_+package+/spam.txt
 %exclude /usr/lib/python2.7/site-packages/pecan/tests/scaffold_fixtures/file_sub/foo_+package+
 /usr/lib/python2*/*
+
+%files python
+%defattr(-,root,root,-)
 /usr/lib/python3*/*
