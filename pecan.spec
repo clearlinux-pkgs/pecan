@@ -4,7 +4,7 @@
 #
 Name     : pecan
 Version  : 1.3.2
-Release  : 43
+Release  : 44
 URL      : http://pypi.debian.net/pecan/pecan-1.3.2.tar.gz
 Source0  : http://pypi.debian.net/pecan/pecan-1.3.2.tar.gz
 Summary  : A WSGI object-dispatching web framework, designed to be lean and fast, with few dependencies.
@@ -23,7 +23,6 @@ BuildRequires : pip
 BuildRequires : python-dev
 BuildRequires : python3-dev
 BuildRequires : setuptools
-BuildRequires : setuptools-legacypython
 
 %description
 Pecan
@@ -65,7 +64,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1523297068
+export SOURCE_DATE_EPOCH=1523556845
 python3 setup.py build -b py3
 
 %install
