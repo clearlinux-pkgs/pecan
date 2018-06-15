@@ -20,7 +20,7 @@ Requires: logutils
 Requires: six
 BuildRequires : pbr
 BuildRequires : pip
-BuildRequires : python-dev
+
 BuildRequires : python3-dev
 BuildRequires : setuptools
 
