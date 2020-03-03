@@ -1,3 +1,7 @@
 # This file contains recursive sources that require this package
 WSME
+barbican
 ceph
+ironic
+neutron
+neutron-lib
