@@ -4,7 +4,7 @@
 #
 Name     : pecan
 Version  : 1.3.3
-Release  : 60
+Release  : 61
 URL      : http://pypi.debian.net/pecan/pecan-1.3.3.tar.gz
 Source0  : http://pypi.debian.net/pecan/pecan-1.3.3.tar.gz
 Summary  : A WSGI object-dispatching web framework, designed to be lean and fast, with few dependencies.
@@ -65,6 +65,11 @@ Summary: python3 components for the pecan package.
 Group: Default
 Requires: python3-core
 Provides: pypi(pecan)
+Requires: pypi(logutils)
+Requires: pypi(mako)
+Requires: pypi(six)
+Requires: pypi(webob)
+Requires: pypi(webtest)
 
 %description python3
 python3 components for the pecan package.
@@ -79,12 +84,11 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1583201500
-# -Werror is for werrorists
+export SOURCE_DATE_EPOCH=1603398211
 export GCC_IGNORE_WERROR=1
 export CFLAGS="$CFLAGS -fno-lto "
-export FCFLAGS="$CFLAGS -fno-lto "
-export FFLAGS="$CFLAGS -fno-lto "
+export FCFLAGS="$FFLAGS -fno-lto "
+export FFLAGS="$FFLAGS -fno-lto "
 export CXXFLAGS="$CXXFLAGS -fno-lto "
 export MAKEFLAGS=%{?_smp_mflags}
 python3 setup.py build
