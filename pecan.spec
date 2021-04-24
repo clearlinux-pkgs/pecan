@@ -4,7 +4,7 @@
 #
 Name     : pecan
 Version  : 1.3.3
-Release  : 65
+Release  : 66
 URL      : http://pypi.debian.net/pecan/pecan-1.3.3.tar.gz
 Source0  : http://pypi.debian.net/pecan/pecan-1.3.3.tar.gz
 Summary  : A WSGI object-dispatching web framework, designed to be lean and fast, with few dependencies.
