@@ -4,7 +4,7 @@
 #
 Name     : pecan
 Version  : 1.4.1
-Release  : 74
+Release  : 75
 URL      : https://files.pythonhosted.org/packages/2a/cc/d7c9c62b7af117d803ed1441191a2297fd8ee0f4a6fbedaefb46c736ba52/pecan-1.4.1.tar.gz
 Source0  : https://files.pythonhosted.org/packages/2a/cc/d7c9c62b7af117d803ed1441191a2297fd8ee0f4a6fbedaefb46c736ba52/pecan-1.4.1.tar.gz
 Summary  : A WSGI object-dispatching web framework, designed to be lean and fast, with few dependencies.
